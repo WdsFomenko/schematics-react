@@ -6,7 +6,7 @@ const parse_name_1 = require("../utility/parse-name");
 const validation_1 = require("../utility/validation");
 function component(options) {
     if (options.path === undefined) {
-        options.path = '/src/';
+        options.path = '/src/pages';
     }
     const parsedPath = parse_name_1.parseName(options.path, options.name);
     options.name = parsedPath.name;

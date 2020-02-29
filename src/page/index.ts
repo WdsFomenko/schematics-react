@@ -7,7 +7,7 @@ import { Schema as ComponentOptions } from './schema';
 
 export function component(options: ComponentOptions): Rule {
   if (options.path === undefined) {
-    options.path = '/src/';
+    options.path = '/src/pages';
   }
 
   const parsedPath = parseName(options.path, options.name);
