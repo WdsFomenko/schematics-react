@@ -14,14 +14,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitaliy-bobrov/schematics-react.git"
+    "url": "git+https://github.com/WdsFomenko/schematics-react.git"
   },
-  "author": "Vitaliy Bobrov",
+  "author": "Vitaliy Fomenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vitaliy-bobrov/schematics-react/issues"
+    "url": "https://github.com/WdsFomenko/schematics-react/issues"
   },
-  "homepage": "https://github.com/vitaliy-bobrov/schematics-react#readme",
+  "homepage": "https://github.com/WdsFomenko/schematics-react#readme",
   "schematics": "./src/collection.json",
   "dependencies": {
     "@angular-devkit/core": "^7.3.6",
