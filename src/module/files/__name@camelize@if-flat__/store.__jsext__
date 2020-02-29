@@ -1,0 +1,5 @@
+import model from './model';
+
+const initialState = model.init();
+
+export { initialState };

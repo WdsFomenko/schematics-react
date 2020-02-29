@@ -1,18 +1,18 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsReactComponent",
-  "title": "React Component Options Schema",
+  "id": "SchematicsReactPage",
+  "title": "React page Options Schema",
   "type": "object",
   "properties": {
     "path": {
       "type": "string",
       "format": "path",
-      "description": "The path to create the component.",
+      "description": "The path to create the page.",
       "visible": false
     },
     "name": {
       "type": "string",
-      "description": "The name of the component.",
+      "description": "The name of the page.",
       "$default": {
         "$source": "argv",
         "index": 0
@@ -21,12 +21,12 @@
     "styleext": {
       "description": "The file extension to be used for style files.",
       "type": "string",
-      "default": "css"
+      "default": "scss"
     },
     "noSpec": {
       "type": "boolean",
       "description": "Specifies if a spec file is generated.",
-      "default": false
+      "default": true
     },
     "subfolder": {
       "type": "boolean",
@@ -36,12 +36,12 @@
     "propTypes": {
       "type": "boolean",
       "description": "Specifies if a propTypes used.",
-      "default": false
+      "default": true
     },
     "stateful": {
       "type": "boolean",
       "description": "Specifies if a state used.",
-      "default": false
+      "default": true
     },
     "ts": {
       "type": "boolean",

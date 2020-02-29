@@ -1,0 +1,25 @@
+import Immutable from 'immutable';
+
+/**
+ * @constructor
+ */
+
+export default class  {
+
+  /**
+   * Started initialization os stores structure
+   * @static { init }
+   * @returns { Map }
+   */
+
+  static init() {
+    return Immutable.Map({
+      item: {},
+      items: [],
+      total: 0,
+      page: 1,
+      hasPrev: false,
+      hasNext: false
+    });
+  }
+}

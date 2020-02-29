@@ -1,0 +1,15 @@
+import AbstractRestService    from './abstractRest.service';
+
+// we can use some values from store to specify api url
+//import store                  from '../../store';
+
+export default class extends AbstractRestService {
+  constructor() {
+    super();
+  }
+
+  getApiUrl() {
+    return `/<%= dasherize(name) %>`
+  }
+}
+

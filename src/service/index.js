@@ -4,7 +4,7 @@ const core_1 = require("@angular-devkit/core");
 const schematics_1 = require("@angular-devkit/schematics");
 const parse_name_1 = require("../utility/parse-name");
 const validation_1 = require("../utility/validation");
-function functionalComponent(options) {
+function component(options) {
     if (options.path === undefined) {
         options.path = '/src/';
     }
@@ -19,5 +19,5 @@ function functionalComponent(options) {
     ]);
     return schematics_1.mergeWith(templateSource);
 }
-exports.functionalComponent = functionalComponent;
+exports.component = component;
 //# sourceMappingURL=index.js.map

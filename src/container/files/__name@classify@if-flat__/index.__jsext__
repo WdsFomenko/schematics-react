@@ -1,0 +1,58 @@
+import React, { Component }                           from 'react';
+import { connect }                                    from 'react-redux';
+import PropTypes                                      from 'prop-types';
+
+import './styles.scss';
+import template                                       from './template';
+
+class <%= classify(name) %> extends Component {
+
+  // initialize all properties in state
+  state = {
+
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    /**
+     * componentDidMount() is invoked immediately after a component is mounted (inserted into the tree).
+     * Initialization that requires DOM nodes should go here.
+     * If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+     */
+  }
+
+  componentWillUnmount() {
+    /**
+     * componentWillUnmount() is invoked immediately before a component is unmounted and destroyed.
+     * Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests
+     * or cleaning up any subscriptions that were created in componentDidMount()
+     */
+  }
+
+
+  render () {
+    return template(this);
+  }
+}
+
+<%= classify(name) %>.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+
+};
+
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch,
+
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(<%= classify(name) %>);
+

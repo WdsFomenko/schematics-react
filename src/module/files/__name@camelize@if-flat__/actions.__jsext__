@@ -1,0 +1,56 @@
+// <%= camelize(name) %>/actions.js
+import _                                         from 'lodash';
+
+import * as actionTypes                         from './actionTypes';
+import { <%= classify(name) %>Service }         from '../../services';
+import AbstractActions                          from '../common/abstract.actions';
+import * as constants                           from './constants';
+
+
+let <%= classify(name) %>sSrv = new <%= classify(name) %>Service();
+
+/**
+ * common actions
+ */
+
+export const clean = () => dispatch => AbstractActions.clean({
+  dispatch,
+  entityName: constants.NAME,
+  actionTypes
+});
+
+
+export const fetchOne = <%= classify(name) %>Id => dispatch => AbstractActions.fetchOne({
+  dispatch,
+  id: <%= classify(name) %>Id,
+  entityName: constants.NAME,
+  entitySrv: <%= classify(name) %>sSrv,
+  actionTypes
+});
+
+export const setOne = <%= classify(name) %> => dispatch => AbstractActions.setOne({
+  dispatch,
+  item: <%= classify(name) %>,
+  entityName: constants.NAME,
+  actionTypes
+});
+
+export const fetchList = (
+  page = 1, orderBy = 'id', orderType = 'desc'
+) => dispatch => AbstractActions.fetchList({
+  params: { page: 1, per_page: constants.ITEMS_PER_PAGE, order_by: orderBy, order_type: orderType },
+  dispatch,
+  entityName: constants.NAME,
+  entitySrv: <%= classify(name) %>sSrv,
+  actionTypes
+});
+
+
+/**
+ * custom actions
+ */
+
+
+
+
+

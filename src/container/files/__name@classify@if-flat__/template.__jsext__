@@ -1,0 +1,14 @@
+import React, { Fragment }     from 'react';
+import {
+  Container, Box
+}                              from '@material-ui/core';
+
+/* eslint-disable unused-import */
+
+/* eslint-enable unused-import */
+
+export default self => (pug`
+Fragment
+  Container.<%= name %>-wrapper
+
+`);

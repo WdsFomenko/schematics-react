@@ -3,15 +3,33 @@
   "schematics": {
     "component": {
       "aliases": [ "c" ],
-      "factory": "./component/index#component",
-      "description": "Create a React component.",
-      "schema": "./component/schema.json"
+      "factory": "./container/index#component",
+      "description": "Create a React container.",
+      "schema": "./container/schema.json"
     },
     "functional-component": {
       "aliases": [ "fc" ],
       "factory": "./functional-component/index#functionalComponent",
       "description": "Create a functional React component.",
       "schema": "./functional-component/schema.json"
+    },
+    "module": {
+      "aliases": [ "m" ],
+      "factory": "./module/index#component",
+      "description": "Create DDD module for React App.",
+      "schema": "./module/schema.json"
+    },
+    "page": {
+      "aliases": [ "p" ],
+      "factory": "./page/index#component",
+      "description": "Create page for DDD structure React App.",
+      "schema": "./page/schema.json"
+    },
+    "service": {
+      "aliases": [ "s" ],
+      "factory": "./service/index#component",
+      "description": "Create service for DDD structure React App.",
+      "schema": "./page/schema.json"
     }
   }
 }

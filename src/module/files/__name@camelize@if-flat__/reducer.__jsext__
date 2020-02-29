@@ -1,0 +1,26 @@
+// <%= camelize(name) %>/reducer.js
+
+import * as p           from './actionTypes';
+import { initialState } from './store';
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case t.CLEAN_STORE:
+      return initialState;
+    case t.SAVE_ONE:
+    case t.SAVE_ONE_FETCHED:
+      return state.set('item', action.payload);
+    case t.SAVE_ALL:
+      return state.merge(action.payload);
+    case t.FETCH_ONE_BY_ID:
+    case t.FETCH_ONE_BY_ID_SUCCESS:
+    case t.FETCH_ONE_BY_ID_ERROR:
+    case t.SAVE_ONE_SUCCESS:
+    case t.SAVE_ONE_ERROR:
+    case t.ACTIVATE_REQ:
+    case t.ACTIVATE_SUCCESS:
+    case t.ACTIVATE_ERROR:
+    default:
+      return state;
+  }
+};
