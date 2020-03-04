@@ -1,6 +1,6 @@
 // <%= camelize(name) %>/reducer.js
 
-import * as p           from './actionTypes';
+import * as t           from './actionTypes';
 import { initialState } from './store';
 
 export default (state = initialState, action) => {
