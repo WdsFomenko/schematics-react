@@ -1,9 +1,12 @@
-import React, { Component }                           from 'react';
+import React, { Fragment, Component }                 from 'react';
 import { connect }                                    from 'react-redux';
 import PropTypes                                      from 'prop-types';
 
+import {
+  Container, Box
+}                                                     from '@material-ui/core';
+
 import './styles.scss';
-import template                                       from './template';
 
 class <%= classify(name) %> extends Component {
 
@@ -34,7 +37,12 @@ class <%= classify(name) %> extends Component {
 
 
   render () {
-    return template(this);
+    return (
+      <Fragment>
+        <Container className={'<%= name %>-page-wrapper'}>
+        </Container>
+      </Fragment>
+    );
   }
 }
 
