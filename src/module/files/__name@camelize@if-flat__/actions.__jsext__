@@ -38,7 +38,7 @@ export const setOne = <%= classify(name) %> => dispatch => AbstractActions.setOn
 export const fetchList = (
   page = 1, orderBy = 'id', orderType = 'desc'
 ) => dispatch => AbstractActions.fetchList({
-  params: { page: 1, per_page: constants.ITEMS_PER_PAGE, order_by: orderBy, order_type: orderType },
+  params: { page: page || 1, per_page: constants.ITEMS_PER_PAGE, order_by: orderBy, order_type: orderType },
   dispatch,
   entityName: constants.NAME,
   entitySrv: <%= classify(name) %>sSrv,
@@ -49,8 +49,3 @@ export const fetchList = (
 /**
  * custom actions
  */
-
-
-
-
-
