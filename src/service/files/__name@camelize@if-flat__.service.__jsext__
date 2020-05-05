@@ -9,7 +9,6 @@ export default class extends AbstractRestService {
   }
 
   getApiUrl() {
-    return `/<%= dasherize(name) %>`
+    return `/<%= dasherize(name) %>`;
   }
 }
-
